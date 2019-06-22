@@ -9,6 +9,7 @@
   <body>
     <h1>Nothing much yet...</h1>
     <p>Sorry to disappoint. Contact me over at the discussion channel of the OAM APP category of the OAM discord.</p>
+    <p id="login">You are not logged in"</p>
   </body>
   <script>
     function parse_query_string(query) {
@@ -35,6 +36,6 @@
     var query_string = window.location.search.slice(1);
     var parsed_qs = parse_query_string(query_string);
     console.log(parsed_qs.country);
-    document.body.innerHTML.append("<br>You are " + parsed_qs.country);
+    document.getElementById("login").innerText = "You are " + parsed_qs.country;
   </script>
 </html>
